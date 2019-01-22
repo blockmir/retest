@@ -1,0 +1,26 @@
+[Unit]
+Description=DONATE's distributed currency daemon
+After=network.target
+
+[Service]
+User=donate
+Group=donate
+
+Type=forking
+PIDFile=/var/lib/donated/donated.pid
+
+ExecStart=/usr/bin/donated -daemon -pid=/var/lib/donated/donated.pid \
+          -conf=/etc/donate/donate.conf -datadir=/var/lib/donated
+
+ExecStop=-/usr/bin/donate-cli -conf=/etc/donate/donate.conf \
+         -datadir=/var/lib/donated stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

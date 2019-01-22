@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Donate
+Comment=Donate P2P Cryptocurrency
+Comment[fr]=Donate, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Donate, eşten eşe kriptografik sanal para birimi
+Exec=donate-qt %u
+Terminal=false
+Type=Application
+Icon=donate128
+MimeType=x-scheme-handler/donate;
+Categories=Office;Finance;

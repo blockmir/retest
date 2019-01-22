@@ -1,0 +1,26 @@
+# /etc/conf.d/donated: config file for /etc/init.d/donated
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/donate/donate.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/donated"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/donated.pid"
+
+# Where to write donated data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/donated"
+
+# User and group to own donated process
+#BITCOIND_USER="donate"
+#BITCOIND_GROUP="donate"
+
+# Path to donated executable
+#BITCOIND_BIN="/usr/bin/donated"
+
+# Nice value to run donated under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""
